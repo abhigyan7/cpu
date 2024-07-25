@@ -23,7 +23,7 @@ module alu8(
             );
 
    wire [7:0]            sum;
-   wire carry;
+   wire                  carry;
    adder8 adder(
                 .A(A),
                 .B(B),
@@ -68,7 +68,7 @@ module alu8(
     wire [7:0] xnor_value;
     xnor8 _xnor(A,B,xnor_value);
 
-   always @(A, B, sel, c_in) begin
+   always @* begin
 
       case (sel)
 
@@ -108,6 +108,10 @@ module alu8(
 
         INSTR_XNOR: begin
            Y = xnor_value;
+        end
+
+        default: begin
+           Y = 0;
         end
       endcase; // case (sel)
    end

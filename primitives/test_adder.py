@@ -3,7 +3,6 @@
 import cocotb
 from cocotb.triggers import Timer
 
-from itertools import product
 
 def delay_ns(ns: int):
     '''
