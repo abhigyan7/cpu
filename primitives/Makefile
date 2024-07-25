@@ -8,7 +8,7 @@ VERILOG_SOURCES += $(PWD)/adder.sv
 # use VHDL_SOURCES for VHDL files
 
 # TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file
-TOPLEVEL = full_adder
+TOPLEVEL = adder8
 
 # MODULE is the basename of the Python test file
 MODULE = test_adder
